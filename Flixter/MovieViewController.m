@@ -60,6 +60,7 @@
                
 //               NSLog(@"%@", dataDictionary);// log an object with the %@ formatter.
                self.myArray = dataDictionary[@"results"];
+               self.searchData = self.myArray;
                //NSLog(@"%@", self.myArray);
 //               for(int i = 1; i < sizeof(myArray); i++){
 //                   NSLog(@"%@", myArray[i][@"title"]);

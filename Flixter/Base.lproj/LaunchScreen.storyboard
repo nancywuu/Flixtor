@@ -21,19 +21,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="reel_tabbar_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FWO-DL-9gQ">
-                                <rect key="frame" x="197" y="534" width="25" height="25"/>
+                                <rect key="frame" x="196" y="547" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="superhero_tabbar_item" translatesAutoresizingMaskIntoConstraints="NO" id="nl4-sQ-mZ3">
-                                <rect key="frame" x="197" y="581" width="21" height="23"/>
+                                <rect key="frame" x="196" y="600" width="21" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="projector_tabbar_item" translatesAutoresizingMaskIntoConstraints="NO" id="i1k-GD-g9L">
-                                <rect key="frame" x="197" y="634" width="21" height="25"/>
+                                <rect key="frame" x="196" y="655" width="21" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="ticket_tabbar_icon" translatesAutoresizingMaskIntoConstraints="NO" id="42A-nx-SwD">
-                                <rect key="frame" x="195" y="691" width="25" height="25"/>
+                                <rect key="frame" x="195" y="711" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

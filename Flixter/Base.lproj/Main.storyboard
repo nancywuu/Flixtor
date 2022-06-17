@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Now Playing" id="2fa-sE-B0V"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" selectedImage="now_playing_tabbar_item" id="2fa-sE-B0V"/>
                     <navigationItem key="navigationItem" id="GKA-wg-hQp"/>
                     <connections>
                         <outlet property="activityIndicator" destination="T4U-8z-zKq" id="IAf-WJ-Ico"/>
@@ -89,7 +89,7 @@
             <objects>
                 <viewController id="bpY-PU-s56" customClass="DetailsViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Fkw-QF-3Zl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6U-RO-uc4">
@@ -107,13 +107,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5k-V0-ZCb">
-                                <rect key="frame" x="0.0" y="-11" width="414" height="382"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ctc-qp-cUH">
                                 <rect key="frame" x="20" y="78" width="189" height="293"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-zy-1ll">
+                                <rect key="frame" x="20" y="670" width="136" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Watch Trailer"/>
+                                <connections>
+                                    <segue destination="St7-gC-Ny5" kind="presentation" id="3vA-f9-AdX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ARy-qf-YRE"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,11 +142,30 @@
             </objects>
             <point key="canvasLocation" x="1631.8840579710147" y="522.99107142857144"/>
         </scene>
+        <!--Video View Controller-->
+        <scene sceneID="aoR-v5-9eH">
+            <objects>
+                <viewController id="St7-gC-Ny5" customClass="VideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QF9-wq-kcj" customClass="YTPlayerView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XI3-cq-StC"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="QF9-wq-kcj" id="tuw-Pw-59V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dgc-hd-fdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="534"/>
+        </scene>
         <!--Now Playing-->
         <scene sceneID="e6j-Wy-2fo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3l-95-5Eb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" id="1dH-th-hct"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" selectedImage="now_playing_tabbar_item" id="1dH-th-hct"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qCi-Xa-o7L">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -195,7 +223,7 @@
                         <viewLayoutGuide key="safeArea" id="5lZ-Jc-4Dt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Movies" id="Jgc-aU-R9d"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="reel_tabbar_icon" selectedImage="reel_tabbar_icon" id="Jgc-aU-R9d"/>
                     <connections>
                         <outlet property="collectionView" destination="gts-KN-HgX" id="nhg-L0-mC5"/>
                     </connections>
@@ -225,9 +253,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nPj-IQ-HVD"/>
+        <segue reference="hc5-Ro-qTP"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
+        <image name="reel_tabbar_icon" width="25" height="25"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
